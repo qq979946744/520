@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/heart.css">
+    <link rel="stylesheet" href="./css/two.css">
+    <link rel="stylesheet" href="./css/four.css">
+</head>
+
+<body>
+    <div class="main" id="Main">
+        <div class="big">
+            <h1 class="head">虎宝！虎宝！老梁!</h1>
+            <div class="heart"></div>
+            <h1 class="headtwo">快点点进来！</h1>
+            <div class="bottom">
+                <a href="./time.html"><img src="./images/Tiger_sensitive_407px_505734_easyicon.net.png" alt=""></a>
+
+            </div>
+        </div>
+        <div class="two">
+            <div class="text">
+                <h3>520啦，我爱你虎宝！老梁！</h3>
+                <p>
+                    虎宝！520我也有点话想和你说，虽然我们相伴的方式和别人不一样，但是我们每天都是快乐的；我很喜欢和 我的虎宝在一起的感觉，每天都是很充实；虽然有时我会经常去故意惹你生气，但是我们的关系还是一如既往哈哈， 我也很喜欢惹你生气的感觉；
+                </p>
+            </div>
+        </div>
+        <div class="two">
+            <div class="text">
+                <h3>老梁！</h3>
+                <p>
+                    现实中我们是相爱的情侣，但是在游戏里，我们是并肩的铁汁；我相信我们会一直在一起的，日子难免会有磕碰，但是很庆幸也一直有你，爱你虎宝嘿嘿；
+                </p>
+                <p>好啦～我肚子的墨水也不多，就先bb到这里啦</p>
+            </div>
+        </div>
+        <div class="four">
+            <h3>520节日快乐！最后当然是礼物啦</h3>
+            <div>
+                <p>请输入：老梁很爱小刘</p>
+                <p>即可看到小刘的礼物（看到-。-）物流太慢啦哈哈哈</p>
+                <p><input id="str" type="text"></p>
+                <p>
+                    提交提交!想看想看
+                </p>
+                <p><button onclick="print()">看看看！</button></p>
+
+            </div>
+            <div>
+                <ul class="fen" id="Fen">
+                    <li>
+                        <img src="./images/1.jpg" alt="">
+                        <div class="flag">橘彩星光女士淡香水一支</div>
+                    </li>
+                    <li>
+                        <img src="./images/2.jpg" alt="">
+                        <div class="flag">橘彩星光女士淡香水一支</div>
+                    </li>
+                    <li>
+                        <img src="./images/3.jpg" alt="">
+                        <div class="flag">橘彩星光女士淡香水一支</div>
+                    </li>
+                    <li>
+                        <img src="./images/4.jpg" alt="">
+                        <div class="flag">老虎拖鞋一双</div>
+                    </li>
+                    <li>
+                        <img src="./images/5.jpg" alt="">
+                        <div class="flag">神秘拖鞋一双</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    window.onload = function() {
+        var index = 0;
+        var main = document.getElementById('Main')
+        document.onkeydown = function(e) {
+            var keyCode = e.keyCode
+            if (keyCode == 40) {
+                if (index == 3) {
+                    return 0;
+                } else {
+                    index++
+                    main.style.setProperty('animation-name', '');
+                    main.style.setProperty('animation-name', 'down' + 25 * index);
+                }
+            }
+            if (keyCode == 38) {
+                if (index == 0) {
+                    return 0
+                } else {
+                    main.style.setProperty('animation-name', 'up' + 25 * index);
+                    index--
+                }
+            }
+        }
+    }
+
+    function print() {　　
+        var str = document.getElementById('str').value
+
+        if (str == '老梁很爱小刘') {
+            var r = confirm("不行还是得留，不能便宜你；输入：”虎宝爱吃刘屁“；才可以嘻嘻")
+            if (r == true) {
+                alert("嘻嘻")
+            } else {
+
+                alert("不输入的话你也可以猜哈哈哈")
+            }
+        } else if (str == "虎宝爱吃刘屁") {
+            document.getElementById('Fen').style.display = "block"
+        } else {
+            alert("这都输入错误？")
+        }
+    }
+</script>
+
+</html>

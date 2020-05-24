@@ -1,0 +1,110 @@
+.four {
+    font-family: "montserrat";
+    background-image: linear-gradient(125deg, hsl(210, 29%, 29%), #9b59b6, #3498db, #f1c40f);
+    -webkit-background-image: linear-gradient(125deg, #34495e, #9b59b6, #3498db, #f1c40f);
+    background-size: 400%;
+    animation: bganimation 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.four>div {
+    text-align: center;
+    width: 100vw;
+}
+
+.four h3 {
+    margin-top: 80px;
+    color: white;
+}
+
+.four div p {
+    margin-top: 5px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.four div input {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 7px 10px;
+}
+
+.four div button {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(5, 83, 156);
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.four div button:hover {
+    background-color: #3498db;
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.fen {
+    width: 810px;
+    height: 400px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: none;
+}
+
+li {
+    width: 160px;
+    height: 400px;
+    float: left;
+    border-left: 1px solid #fff;
+    position: relative;
+    transition: all 1s;
+}
+
+li img {
+    width: 640px;
+}
+
+.flag {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fen:hover li {
+    width: 40px;
+}
+
+.fen li:hover {
+    width: 640px;
+}

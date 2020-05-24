@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>与老梁一起度过了那么那么多天</title>
+    <link rel="stylesheet" href="./css/time.css">
+</head>
+
+<body>
+    <h1>
+        <p>老梁老梁!</p>
+        <p>算一算咱已经度过了好多好多天了:</p>
+    </h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <h1 id="font">
+        <p>按天数已经:<span id="days"></span>天啦！</p>
+        <p>换算换算的话已经:</p>
+        <p style="font-size: 1.4rem;"><span id="hours">0</span>小时</p>
+        <p style="font-size: 1.6rem;"><span id="mins">0</span>分钟</p>
+        <p style="font-size: 1.8rem;"><span id="seconds">0</span>秒</p>
+    </h1>
+    <h1>加油！不要让它停下来好不好，🐯🐯</h1>
+</body>
+<script>
+    window.onload = function() {
+        setInterval(fun, 1000)
+    }
+
+
+
+    var fun = function() {
+        var startTime = new Date('2019-10-17'); // 开始时间
+        var endTime = new Date(); // 结束时间
+        var days = document.getElementById('days')
+        var hours = document.getElementById('hours')
+        var mins = document.getElementById('mins')
+        var seconds = document.getElementById('seconds')
+
+        days.innerText = Math.floor((endTime - startTime) / 1000 / 60 / 60 / 24)
+        hours.innerText = Math.floor((endTime - startTime) / 1000 / 60 / 60)
+        mins.innerText = Math.floor((endTime - startTime) / 1000 / 60)
+        seconds.innerText = Math.floor((endTime - startTime) / 1000)
+        seconds.style.color = getRandomColor()
+    }
+    var getRandom = function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    var getRandomColor = function() {
+        var c1 = getRandom(0, 255);
+        var c2 = getRandom(0, 255);
+        var c3 = getRandom(0, 255);
+        return 'rgb(' + c1 + ',' + c2 + ',' + c3 + ')'
+    }
+</script>
+
+</html>
